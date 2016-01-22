@@ -2,22 +2,22 @@
 %This file will generate a rectangular "leaf" that resists bending and stretching. 
 %It will be held in place by a line of target points along its center
 
-L = 3;                              % length of computational domain (m)
+L = 0.3;                              % length of computational domain (m)
 N = 512;                            % number of Cartesian grid meshwidths at the finest level of the AMR grid
 dx = L/N;                           % Cartesian mesh width (m)
 
-drag_length = 1.0;                  % drag line length (m)
+drag_length = 0.10;                  % drag line length (m)
 npts_drag = ceil(2*(drag_length/L)*N);  % number of points along the span
-npts = npts_drag;	    % total number points on each dragline 
+npts = npts_drag;                   % total number points on each dragline 
 ds = drag_length/(npts_drag-1);     % drag line spacing (m)
 
 mesh_name = 'spider2d_';            % structure name
-offset = -0.25;	                    % plate offset from center of domain (m)
+offset = 0.0;	                    % plate offset from center of domain (m)
 
-kappa_spring = 2.0e2;               % spring constant (Newton)
-kappa_beam = 5.0e-5;                % beam stiffness constant (Newton m)
+kappa_spring = 2.0e1;               % spring constant (Newton)
+kappa_beam = 5.0e-15;                % beam stiffness constant (Newton m)
 kappa_target = kappa_spring;        % target point penalty spring constant (Newton/m)
-mass = 0.002;                      % mass of the spider (kg)
+mass = 0.0002;                      % mass of the spider (kg), I had to estimate what a 2D "spider sheet" would weigh
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

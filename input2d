@@ -1,9 +1,8 @@
 // physical parameters
-L = 3.0                                   // length of the computational (fluid) domain (m)
-RHO = 1.225   //fluid mass density (kg/m^3)
-MU = 0.00001983                             // fluid dynamic viscosity (N s / m^2)
+L = 0.30                                   // length of the computational (fluid) domain (m)
+RHO = 1.177   //fluid mass density (kg/m^3)
+MU = 0.00001846                             // fluid dynamic viscosity (N s / m^2)
 V = 1.0 //
-//
 //
 // grid spacing parameters
 MAX_LEVELS = 4                            // maximum number of levels in locally refined grid
@@ -15,7 +14,7 @@ DX = (1.0*L)/NFINEST                      // Cartesian mesh width (m)
 // solver parameters
 DELTA_FUNCTION      = "IB_4"              //
 START_TIME          = 0.0e0               // initial simulation time
-END_TIME            = 40               // final simulation time
+END_TIME            = 4               // final simulation time
 GROW_DT             = 2.0e0               // growth factor for timesteps
 NUM_CYCLES          = 1                   // number of cycles of fixed-point iteration
 CONVECTIVE_OP_TYPE  = "PPM"               // convective differencing discretization type
